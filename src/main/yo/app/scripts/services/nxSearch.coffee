@@ -1,6 +1,6 @@
 angular.module('nuxeoAngularSampleApp')
 
-.factory "nxSearch", ["$http","$q",($http,$q)->
+.factory "nxSearch", ["$http","$q","nxUrl",($http,$q,nxUrl)->
   
   class nxSearch
     constructor: ()->
@@ -41,7 +41,7 @@ angular.module('nuxeoAngularSampleApp')
 
       @busy = true
 
-      url = "/nuxeo/api/v1/path/@search"
+      url = nxUrl + "/path/@search"
       if @bo? then url += "/@bo/" + @bo
       url += "?currentPageIndex="+@currentPageIndex+"&pageSize="+@pageSize+"&query=" + @query;
 
