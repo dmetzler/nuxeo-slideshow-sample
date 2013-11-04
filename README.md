@@ -51,3 +51,8 @@ Grunt serves the HTML app by using NodeJS. In order to avoid CORS issues, a prox
                       +----------------------+
 
 This means that in the code, all API calls will be done on `/nuxeo` without specifying a special http host. 
+
+
+## Tributes
+
+Kudos to [Laurent Doguin](https://github.com/ldoguin) for the initial implementation.
