@@ -15,9 +15,6 @@ angular.module("nuxeoAngularSampleApp")
   .setPageSize(4)
   .setBOAdapter("SlideShowElement")
 
-  $scope.search.nextPage()
-
-
   $scope.doSearch = ()->
     $location.path("slideshow/"+$scope.tagToSearch)
 
