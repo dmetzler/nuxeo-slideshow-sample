@@ -1,0 +1,32 @@
+<h1 class="ui dividing header">
+  Searching for pictures ?
+</h1>
+
+
+<form class="ui form">
+  <div class="field">
+    <div class="ui icon input">
+      <input ng-model="tagToSearch" type="text" placeholder="Enter a tag here">
+      <i class="inverted search icon"></i>
+    </div>
+  </div>
+  <button ng-click="doSearch()" class="ui blue submit button">Search</button>
+</div>      
+      
+
+<h2 class="ui dividing header">Searching for tag {{searchTag}}</h2>
+<div class="ui two items" infinite-scroll="search.nextPage()" infinite-scroll-disabled="search.busy" infinite-scroll-distance="1">
+  <div class="item" ng-repeat="item in search.items">
+    <div class="sides">
+      <div class="active side">
+        <div class="image">
+          <img ng-src="{{item.value.mediumURL}}" width="100%">          
+        </div>
+        <div class="content">
+          <div class="name">{{item.value.title}}</div>
+          <p class="description">{{item.value.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

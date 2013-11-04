@@ -1,0 +1,9 @@
+<component name="org.nuxeo.slideshow.SlideShowElement">
+
+   <extension target="org.nuxeo.ecm.core.api.DocumentAdapterService" point="adapters">
+       <adapter
+           class="org.nuxeo.slideshow.SlideShowElement"
+           factory="org.nuxeo.slideshow.SlideShowElementFactory"/>
+   </extension>
+    
+</component>
